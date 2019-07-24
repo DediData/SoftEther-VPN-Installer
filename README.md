@@ -9,16 +9,34 @@ wget -O softether-installer.sh https://raw.githubusercontent.com/DediData/SoftEt
 ```
 
 ### Restart VPN Server:
-```shsystemctl restart softether-vpnserver```
+```sh
+systemctl restart softether-vpnserver```
 
 ### Stop VPN Server:
-```shsystemctl stop softether-vpnserver```
+```sh
+systemctl stop softether-vpnserver```
 
 ### Start VPN Server:
-```shsystemctl start softether-vpnserver```
+```sh
+systemctl start softether-vpnserver```
 
 ### Enable VPN Server in boot loading:
-```shsystemctl enable softether-vpnserver```
+```sh
+systemctl enable softether-vpnserver```
 
 ### Disable VPN Server in boot loading:
-```shsystemctl disable softether-vpnserver```
+```sh
+systemctl disable softether-vpnserver```
+
+##Management Methods:
+### 1- Using SSH command prompt: 
+Run in terminal:
+```sh
+vpncmd```
+
+Press 1 to select "Management of VPN Server or VPN Bridge"
+then press Enter without typing anything to connect to the localhost server, and again press Enter without inputting anything to connect to server by server admin mode.
+Then use command below to change admin password:
+```sh
+ServerPasswordSet```
+
