@@ -53,7 +53,9 @@ Run in terminal:
 vpncmd
 ```
 Press 1 to select "Management of VPN Server or VPN Bridge"
-then press Enter without typing anything to connect to the localhost server, and again press Enter without inputting anything to connect to server by server admin mode.
+
+Then press Enter without typing anything to connect to the localhost server, and again press Enter without inputting anything to connect to server by server admin mode.
+
 Then use command below to change admin password:
 ```sh
 ServerPasswordSet
