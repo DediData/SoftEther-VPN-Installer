@@ -1,3 +1,5 @@
+![](https://img.shields.io/github/stars/DediData/SoftEther-VPN-Installer.svg) ![](https://img.shields.io/github/forks/DediData/SoftEther-VPN-Installer.svg) ![](https://img.shields.io/github/issues/DediData/SoftEther-VPN-Installer.svg)
+
 ## SoftEther-VPN-Installer
 SoftEther VPN Installer for CentOS &amp; Ubuntu, etc
 
@@ -20,5 +22,3 @@ systemctl enable softether-vpnserver
 
 ### Disable VPN Server in boot loading:
 systemctl disable softether-vpnserver
-
-![](https://img.shields.io/github/stars/DediData/SoftEther-VPN-Installer.svg) ![](https://img.shields.io/github/forks/DediData/SoftEther-VPN-Installer.svg) ![](https://img.shields.io/github/issues/DediData/SoftEther-VPN-Installer.svg)
