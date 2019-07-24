@@ -28,12 +28,12 @@ dist-check
 function install-softether() {
 	if [ "$DISTRO" == "Ubuntu" ] || [ "$DISTRO" == "Debian" ] || [ "$DISTRO" == "Raspbian" ]; then
 		apt update -y
-		apt install wget curl git nano build-essential libncurses5-dev libreadline-dev llibssl-dev zlib1g-dev -y
+		apt install wget curl git nano build-essential cmake libncurses-dev libreadline-dev libssl-dev zlib1g-dev -y
 	elif [ "$DISTRO" == "CentOS" ] || [ "$DISTRO" == "Redhat" ]; then
 		yum update -y
 		yum install epel-release -y
 		yum groupinstall "development tools" -y
-		yum install wget curl git nano readline-devel ncurses-devel openssl-devel -y
+		yum install wget curl git nano cmake readline-devel ncurses-devel openssl-devel -y
 	fi
 
 	cd $HOME
