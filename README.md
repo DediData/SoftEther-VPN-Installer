@@ -1,6 +1,9 @@
 ![](https://img.shields.io/github/stars/DediData/SoftEther-VPN-Installer.svg) ![](https://img.shields.io/github/forks/DediData/SoftEther-VPN-Installer.svg) ![](https://img.shields.io/github/issues/DediData/SoftEther-VPN-Installer.svg)
 
-# Softether Auto Installer Multi Platform
+# Softether Server Auto Installer:
+Supports: SoftEther, OpenVPN, IPSEC / L2TP, SSTP, User Management, User Statistics, etc
+
+## Softether Auto Installer Multi Platform
 * Softether Auto Installer Script for multi platforms
 * Softether VPN server always latest version
 * Checks for ```firewalld``` and add related rules
