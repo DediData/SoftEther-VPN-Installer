@@ -40,11 +40,12 @@ systemctl disable softether-vpnserver
 
 ## Management Methods:
 ### 1- Using SoftEther VPN Server Manager Application:
-Download "SoftEther VPN Server Manager"
+Download & Install "SoftEther VPN Server Manager":
 
-https://www.softether-download.com/en.aspx?product=softether :
+https://www.softether-download.com/en.aspx?product=softether
 
-Add your Server IP address and connect, then set an admin password and setup SoftEther VPN
+Add your Server IP address and connect!
+Then set an admin password and setup SoftEther VPN ! Enjoy !
 
 ### 2- Using SSH Command Prompt:
 Run in terminal:
