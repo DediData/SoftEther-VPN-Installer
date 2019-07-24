@@ -33,7 +33,7 @@ function install-softether() {
 		yum update -y
 		yum install epel-release -y
 		yum groupinstall "development tools" -y
-		yum install wget curl git nano cmake readline-devel ncurses-devel openssl-devel -y
+		yum install wget curl git nano cmake3 readline-devel ncurses-devel openssl-devel -y
 	fi
 
 	cd $HOME
@@ -41,6 +41,9 @@ function install-softether() {
 	git clone https://github.com/SoftEtherVPN/SoftEtherVPN.git || exit $?
 	cd SoftEtherVPN
 	git submodule update --init --recursive
+	if [ "$DISTRO" == "CentOS" ] || [ "$DISTRO" == "Redhat" ]; then
+		sed -i.bak 's/cmake/cmake3/g' configure
+	fi
 	./configure || exit $?
 	cd tmp
 	make || exit $?
