@@ -3,6 +3,7 @@
 # Softether Auto Installer Multi Platform
 * Softether Auto Installer Script for multi platforms
 * Softether VPN server always latest version
+* Checks for ```firewalld``` and add related rules
 
 ## SoftEther-VPN-Installer
 SoftEther VPN Installer for CentOS &amp; Ubuntu, etc
