@@ -27,13 +27,24 @@ dist-check
 ## Install SoftEther
 function install-softether() {
 	if [ "$DISTRO" == "Ubuntu" ] || [ "$DISTRO" == "Debian" ] || [ "$DISTRO" == "Raspbian" ]; then
-		apt-get update
-		apt-get install software-properties-common -y
+		apt update -y
+		apt install build-essential libncurses5-dev libreadline-dev llibssl-dev zlib1g-dev -y
 	elif [ "$DISTRO" == "CentOS" ] || [ "$DISTRO" == "Redhat" ]; then
 		yum update -y
-		yum install epel-release -y
-		yum -y install wget curl git nano centos-release-scl devtoolset-7-gcc* devtoolset-7-binutils
+		yum install wget curl git nano epel-release -y
+		yum groupinstall "development tools" -y
 	fi
+
+	cd $HOME
+	if [[ ! -d "SoftEtherVPN" ]]; then
+		git clone https://github.com/SoftEtherVPN/SoftEtherVPN.git || exit $?
+	fi
+	cd SoftEtherVPN
+	git submodule update --init --recursive
+	./configure || exit $?
+	cd tmp
+	make || exit $?
+	make install || exit $?
 }
 install-softether
 
@@ -73,9 +84,7 @@ function set-firewalld-rules() {
 }
 set-firewalld-rules
 
-# Build SoftEther
-cat se-build.sh | scl enable devtoolset-7 -
-
 systemctl daemon-reload
 systemctl enable softether-vpnserver
-echo "Reboot and check if vpnserver is running"
+systemctl start softether-vpnserver
+systemctl status softether-vpnserver
