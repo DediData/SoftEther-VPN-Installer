@@ -9,16 +9,16 @@ wget -O softether-installer.sh https://raw.githubusercontent.com/DediData/SoftEt
 ```
 
 ### Restart VPN Server:
-systemctl restart softether-vpnserver
+```shsystemctl restart softether-vpnserver```
 
 ### Stop VPN Server:
-systemctl stop softether-vpnserver
+```shsystemctl stop softether-vpnserver```
 
 ### Start VPN Server:
-systemctl start softether-vpnserver
+```shsystemctl start softether-vpnserver```
 
 ### Enable VPN Server in boot loading:
-systemctl enable softether-vpnserver
+```shsystemctl enable softether-vpnserver```
 
 ### Disable VPN Server in boot loading:
-systemctl disable softether-vpnserver
+```shsystemctl disable softether-vpnserver```
