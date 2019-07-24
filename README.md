@@ -33,17 +33,20 @@ systemctl enable softether-vpnserver
 systemctl disable softether-vpnserver
 ```
 
-##Management Methods:
-### 1- Using SSH command prompt: 
+## Management Methods:
+### 1- Using SoftEther VPN Server Manager Application:
+Download "SoftEther VPN Server Manager"
+https://www.softether-download.com/en.aspx?product=softether
+Add your Server IP address and connect, then set an admin password and setup SoftEther VPN
+
+### 2- Using SSH Command Prompt:
 Run in terminal:
 ```sh
 vpncmd
 ```
-
 Press 1 to select "Management of VPN Server or VPN Bridge"
 then press Enter without typing anything to connect to the localhost server, and again press Enter without inputting anything to connect to server by server admin mode.
 Then use command below to change admin password:
 ```sh
 ServerPasswordSet
 ```
-
