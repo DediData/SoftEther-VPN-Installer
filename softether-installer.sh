@@ -2,11 +2,32 @@
 
 ## Check Root Function
 function root-check() {
-    if [[ "$EUID" -ne 0 ]]; then
-      echo "You need root access to run this script."
-      exit
-    fi
+	if [[ "$EUID" -ne 0 ]]; then
+		echo "You need root access to run this script."
+		exit
+	fi
 }
+## Root Check
+root-check
+
+## Detect Operating System
+function dist-check() {
+	if [ -e /etc/centos-release ]; then
+		DISTRO="CentOS"
+	elif [ -e /etc/debian_version ]; then
+		DISTRO=$(lsb_release -is)
+	elif [ -e /etc/arch-release ]; then
+		DISTRO="Arch"
+	elif [ -e /etc/fedora-release ]; then
+		DISTRO="Fedora"
+	elif [ -e /etc/redhat-release ]; then
+		DISTRO="Redhat"
+	else
+		echo "Your distribution is not supported (yet)."
+		exit
+	fi
+}
+
 
 yum -y install wget curl git nano centos-release-scl
 yum -y install devtoolset-7-gcc* devtoolset-7-binutils
