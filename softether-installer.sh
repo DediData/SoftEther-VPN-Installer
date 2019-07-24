@@ -1,5 +1,13 @@
 #!/bin/bash
 
+## Check Root Function
+function root-check() {
+    if [[ "$EUID" -ne 0 ]]; then
+      echo "You need root access to run this script."
+      exit
+    fi
+}
+
 yum -y install wget curl git nano centos-release-scl
 yum -y install devtoolset-7-gcc* devtoolset-7-binutils
 ZONE=$(firewall-cmd --get-default-zone)
