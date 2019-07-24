@@ -14,7 +14,7 @@ SoftEther VPN Installer for CentOS &amp; Ubuntu, etc
 ## Instruction
 Run the following one line on your command prompt:
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/DediData/SoftEther-VPN-Installer/master/softether-installer.sh)
+bash<(curl -s https://raw.githubusercontent.com/DediData/SoftEther-VPN-Installer/master/softether-installer.sh)
 ```
 
 ### Restart VPN Server:
