@@ -3,8 +3,6 @@
 # Softether Auto Installer Multi Platform
 * Softether Auto Installer Script for multi platforms
 * Softether VPN server always latest version
-* Centos 7+
-* Ubuntu 14+
 
 ## SoftEther-VPN-Installer
 SoftEther VPN Installer for CentOS &amp; Ubuntu, etc
